@@ -1,0 +1,22 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+{% include 'navbar.html' %}
+    <br>
+    <br>
+    <h1 align="center"style="color: cornflowerblue">Admin Login Page</h1>
+    <br>
+  <form action="{% url 'adminhome' %}"method="post">
+   {% csrf_token %}
+    <table border="0"align="center">
+       {{ Admin }}
+      <tr><th height="20"></th></tr>
+      <tr align="center"><th colspan="2">
+          <button type="submit" class="btn btn-primary">Login</button>
+      </th></tr>
+      <tr align="center"><th height="30"colspan="2">{% for x in messages %}
+          <font size="10"color="red">{{ x }}</font>
+      {% endfor %}</th></tr>
+    </table>
+  </form>
+{% endblock %}

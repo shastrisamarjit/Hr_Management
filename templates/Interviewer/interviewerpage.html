@@ -1,0 +1,26 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+{% include 'navbar.html' %}
+    <br>
+    <h1 align="center"><font color="#6495ed">Interviewer Login Page</font></h1>
+    <br>
+    <br>
+    <form action="{% url 'interviewerhome' %}"method="post">
+               {% csrf_token %}
+      <table align="center"border="0">
+        {{ interviewer }}
+        <tr><th height="20"></th></tr>
+        <tr align="center"><th colspan="2">
+            <button type="submit"class="btn btn-primary">Login</button>
+        </th></tr>
+        <tr align="center"><th colspan="2"height="20">
+            {% for x in messages %}
+               <font color="red"size="10">{{ x }}</font>
+            {% endfor %}
+        </th></tr>
+
+      </table>
+    </form>
+
+{% endblock %}

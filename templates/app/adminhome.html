@@ -1,0 +1,21 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+    <h1 style="color: cornflowerblue"align="center">Admin Home Page</h1>
+    <br>
+    <br>
+    <br>
+    <table align="center"border="0">
+       <tr align="center"><th><button type="submit" class="btn btn-success">ADD EMPLOYEE</button></th></tr>
+       <tr><th height="20"></th></tr>
+       <tr align="center"><th><button type="submit" class="btn btn-success">VIEW EMPLOYEE</button></th></tr>
+       <tr><th height="20"></th></tr>
+       <tr><th><button type="submit" class="btn btn-success">UPDATE EMPLOYEE</button></th></tr>
+       <tr><th height="20"></th></tr>
+       <tr><th><button type="submit" class="btn btn-success">DELETE EMPLOYEE</button></th></tr>
+       <tr><th height="20"></th></tr>
+       <tr align="center"><th><a href="{% url 'home' %}"><button type="submit"class="btn btn-light">Logout</button>
+       </a></th></tr>
+
+    </table>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+{% include 'navbar.html' %}
+    <br>
+    <h1 align="center"><font color="#6495ed">Hr head Login Page</font></h1>
+    <br>
+    <br>
+     <form action="{% url 'hr_headhome' %}"method="post">
+      <table align="center"border="0">
+         {{ hrhead }}
+         <tr><th height="30"></th></tr>
+         <tr align="center"><th colspan="2"><button type="submit"class="btn btn-primary">Login</button></th></tr>
+      </table>
+     </form>
+{% endblock %}

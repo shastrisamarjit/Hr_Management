@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+    <h1 align="center"><font color="#6495ed">Applicant Registration Page</font></h1>
+    <br>
+    <br>
+    <form action="{% url 'applicantsubmit' %}"method="post">
+                {% csrf_token %}
+     <table align="center"border="0">
+        {{ register }}
+        <tr><th height="30"></th></tr>
+         <tr align="center"><th colspan="2">
+                <button type="submit"class="btn btn-success">Register</button>
+         </th></tr>
+        <tr><th height="30"></th></tr>
+        <tr align="center"><th colspan="2">
+           <a href="{% url 'applicantpage' %}">
+            <button type="submit"class="btn btn-primary">Back To Previous Page</button>
+           </a>
+        </th></tr>
+      </table>
+    </form>
+{% endblock %}

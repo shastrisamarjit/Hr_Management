@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+  <h1 style="color: cornflowerblue"align="center">Manager Home Page</h1>
+  <br>
+  <br>
+  <br>
+
+  <table align="center"border="0">
+      <tr align="center"><th>
+          <button type="submit" class="btn btn-success">Recruitment</button>
+      </th></tr>
+      <tr><th height="20"></th></tr>
+      <tr align="center"><th>
+          <button type="submit" class="btn btn-success">Interview Schedule</button>
+      </th></tr>
+      <tr align="center"><th>
+          <a href="{% url 'home' %}">
+              <button type="submit" class="btn btn-light">Logout</button></a>
+      </th></tr>
+  </table>
+
+{% endblock %}

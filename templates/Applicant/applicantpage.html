@@ -1,0 +1,28 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+{% include 'navbar.html' %}
+    <br>
+    <br>
+    <h1 align="center"><font color="#6495ed">Applicant Login Page</font></h1>
+    <table align="center">
+      <tr><th height="20"></th></tr>
+      {{ applicant }}
+      <tr><th height="20"></th></tr>
+       <tr align="center"><th colspan="2">
+                <button type="submit"class="btn btn-primary">Login</button>
+       </th></tr>
+      <tr><th height="15"></th></tr>
+      <form action="{% url 'appregister' %}"method="post">
+      {% csrf_token %}
+       <tr align="center"><th height="30"colspan="2">
+          <button type="submit"class="btn btn-warning"><font size="5">Registration</font></button>
+       </th></tr>
+      </form>
+      <tr><th height="50"></th></tr>
+      <tr align="center"><th colspan="2">{% for x in messages %}
+                 <font size="5"color="green">{{ x }}</font>
+              {% endfor %}
+      </th></tr>
+    </table>
+{% endblock %}
